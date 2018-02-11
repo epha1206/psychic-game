@@ -4,13 +4,31 @@
     <head>
         <meta charset="UTF-8">
         <title>Psychic Game</title>
+        <link rel="stylesheet" type="text/css" href="C:\Users\epha1\Desktop\code\psychic-game\assets\css\reset.css">
+        <style>
+            h1
+                {
+                    font-size: 45px;
+                }
+        </style>
     </head>
 
 <body>
     
-    <div id="game">
+    <div id="wrapper">
+
         <h1>The Psychic Game</h1>
         <p>Guess what letter I'm thinking of..</p>
+
+    </div>
+
+    <div id="game">
+        <ul class="list-group">
+            <li class="list-group-item"><p id="wins">Wins: </p></li>
+            <li class="list-group-item"><p id="losses">Losses: </p></li>
+            <li class="list-group-item"><p id="guessesleft">Guesses left: </p></li>
+            <li class="list-group-item"><p id="yourguess">Your guesses so far: </p></li>
+        </ul>
     </div>
 </body>
 </html>

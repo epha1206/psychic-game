@@ -9,7 +9,9 @@
         text-align: left;
     }
 
-body
+html, body
     {
         background-color: aquamarine;
+        line-height: 30px;
+        font-family: 'Lato', sans-serif;
     }

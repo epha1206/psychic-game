@@ -32,3 +32,25 @@ var reset = function() {
 
 updateLetterToGuess();
 updateGuessesLeft();
+
+document.onkeyup = function(event) {
+    guessesLeft--;
+var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+yourGuess.push(userGuess);
+updateGuessesLeft();
+updateGuessesSoFar();
+
+    if (guessesLeft > 0){
+        if (userGuess == letterToGuess){
+            wins++;
+            document.querySelector('#wins').innerHTML = "Wins: " + wins;
+            alert("You are a psychic!");
+            reset();
+        }
+    }else if(guessesLeft == 0){
+        losses++;
+        document.querySelector('#losses').innerHTML = "Losses: " + losses;
+        alert("Sorry, you are not a psychic!");
+        reset();
+    }
+};
